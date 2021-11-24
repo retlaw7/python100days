@@ -17,12 +17,15 @@ while game_over != True:
     #generate new option for B
     rng_B = random.randint(0, len(data.list) - 1)
     b_subject = data.list[rng_B]
+
     #duplicate checker
     while a_subject['name'] == b_subject['name']:
         rng_B = random.randint(0, len(data.list) - 1)
         b_subject = data.list[rng_B]
+
     #display option for B
     print(f"Against B {b_subject['name']}, a {b_subject['description']},  from {b_subject['country']}")
+
 
     #ask for input
     choice = input("Who has more followers? A or B?").lower()
